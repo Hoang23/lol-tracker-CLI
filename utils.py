@@ -40,7 +40,7 @@ class chatCLI:
         print("sup: " + str(self.sup))
         
 
-    def createNote(self): # takes in a list
+    def createNote(self): 
         for note in self.notes:
             print(note)
             
@@ -64,34 +64,34 @@ class chatCLI:
                 for words in latestInput:
                     if words.isdigit():
                         self.top = int(words)
-                        chatCLI.info(self)
-            elif "mid" in latestInput:
+                        
+            if "mid" in latestInput:
                 for words in latestInput:
                     if words.isdigit():
                         self.mid = int(words)
-                        chatCLI.info(self)
-            elif "jg" in latestInput:
+                      
+            if "jg" in latestInput:
                 for words in latestInput:
                     if words.isdigit():
                         self.jg = int(words)
-                        chatCLI.info(self)
-            elif "bot" in latestInput:
+                       
+            if "bot" in latestInput:
                 for words in latestInput:
                     if words.isdigit():
                         self.bot = int(words)
-                        chatCLI.info(self)
-            elif "sup" in latestInput:
+                       
+            if "sup" in latestInput:
                 for words in latestInput:
                     if words.isdigit():
                         self.sup = int(words)
-                        chatCLI.info(self)
-            elif "note" in latestInput:
+                        
+            if "/note" in latestInput:
                 self.notes.append(_input)
-                chatCLI.info(self)
-            elif "reset" in _input:
+               
+            if "/reset" in _input:
                 chatCLI.reset(self)
-            else:
-                chatCLI.info(self)
+            
+            chatCLI.info(self)
                 
             
             print("\n\n\n")
